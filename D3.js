@@ -104,14 +104,16 @@ const starWarsCharacters = [
 /* ESERCIZIO 1
   Crea una variabile chiamata "characters" e assegnale un array vuoto
 */
+console.log("Es 1");
 let characters = []
-
+console.log("characters = ", characters);
 
 /* ESERCIZIO 2
   Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
   Dovrai accedere alla proprietà "name" di ogni oggetto in esso contenuto, e inserirla nell'array "characters" creato precedentemente.
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
+console.log("Es 2");
 for (let i = 0; i < starWarsCharacters.length; i++) {
   const element = starWarsCharacters[i].name;
   characters.push(element);
@@ -120,7 +122,7 @@ console.log(characters);
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
-
+console.log("Es 3");
 let femaleCharacters = []
 
 for (let j = 0; j < starWarsCharacters.length; j++) {
@@ -135,6 +137,7 @@ console.log(femaleCharacters);
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
+console.log("Es 4");
 let eyeColor = {
   blue: [],
   yellow: [],
@@ -142,12 +145,12 @@ let eyeColor = {
   red: [],
   bluegray: [],
 }
-
+console.log(eyeColor);
 /* ESERCIZIO 5
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
-
+console.log("Es 5");
 for (let k = 0; k < starWarsCharacters.length; k++) {
   const element = starWarsCharacters[k];
   switch (element.eye_color) {
@@ -176,7 +179,7 @@ console.log(eyeColor);
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
-
+console.log("Es 6");
 let crewMass = 0;
 
 let index = 0;
@@ -200,7 +203,7 @@ console.log("Massa totale dell'equipaggio:", crewMass);
 
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
-
+console.log("Es 7");
 if (crewMass < 500) {
   console.log("Ship is under loaded");
 } else if (crewMass <= 700) {
@@ -216,18 +219,20 @@ if (crewMass < 500) {
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
+
+console.log("Es 8");
 for (let l = 0; l < starWarsCharacters.length; l++) {
   if (starWarsCharacters[l].gender === "n/a") {
     starWarsCharacters[l].gender = "robot"
   }
+  console.log( starWarsCharacters[l].name, starWarsCharacters[l].gender);
 }
-console.log(starWarsCharacters);
 
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "characters" prima e dopo l'operazione.
 */
-
+console.log("Es 9");
 console.log("Prima", characters);
 
 for (let i = 0; i < femaleCharacters.length; i++) {
@@ -248,7 +253,7 @@ console.log("Dopo", characters);
 const randomIndex = Math.floor(Math.random() * starWarsCharacters.length);
 
 const randomCharacter = starWarsCharacters[randomIndex];
-
+console.log("Es 10");
 console.log(`Ecco un personaggio di Star Wars:`);
 console.log(`Nome: ${randomCharacter.name}`);
 console.log(`Altezza: ${randomCharacter.height} cm`);
